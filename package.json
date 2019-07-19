@@ -8,7 +8,7 @@
     "build": "webpack --config ./webpack/prod --progress --hide-modules",
     "build-gh": "webpack --config ./webpack/gh-pages --progress --hide-modules",
     "deploy-gh": "sh ./tools/gh-pages-publish.sh",
-    "prepare": "npm run build && npm run copy",
+    "prepare-lib": "npm run build && npm run copy",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "copy": "cp README.md dist/lib",
