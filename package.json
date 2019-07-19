@@ -1,7 +1,7 @@
 {
   "name": "vue-arc-text",
   "description": "A Vue.js library",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "author": "alex marcos <alexsbd1@gmail.com>",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/demo --open --inline --hot",
