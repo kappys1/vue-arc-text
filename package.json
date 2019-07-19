@@ -1,0 +1,91 @@
+{
+  "name": "vue-arc-text",
+  "description": "A Vue.js library",
+  "version": "0.1.0",
+  "author": "alex marcos <alexsbd1@gmail.com>",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/demo --open --inline --hot",
+    "build": "webpack --config webpack/prod --progress --hide-modules",
+    "build-gh": "webpack --config webpack/gh-pages --progress --hide-modules",
+    "deploy-gh": "sh ./tools/gh-pages-publish.sh",
+    "prepublish": "npm run build && npm run copy",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "copy": "cp README.md dist/lib",
+    "travis-deploy-once": "travis-deploy-once",
+    "prepush": "npm run build",
+    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kappys1/vue-arc-text.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "arc",
+    "text",
+    "curve",
+    "arc-type",
+    "arc-text",
+    "curve-type",
+    "curve-text",
+    "angular",
+    "vue",
+    "vue-curve-text",
+    "vue-arc-text"
+  ],
+  "files": [
+    "dist/lib"
+  ],
+  "main": "dist/index.js",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "dependencies": {
+    "arc-text": "^1.0.1"
+  },
+  "peerDependencies": {
+    "vue": "2.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/release-notes-generator": "^7.2.1",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "colors": "^1.3.2",
+    "copy-pkg-json-webpack-plugin": "0.0.38",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.0.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "semantic-release": "^15.13.18",
+    "travis-deploy-once": "^5.0.9",
+    "vue": "^2.1.0",
+    "vue-loader": "^10.0.0",
+    "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.1.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.9"
+  }
+}
