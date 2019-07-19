@@ -8,7 +8,7 @@
     "build": "webpack --config ./webpack/prod --progress --hide-modules",
     "build-gh": "webpack --config ./webpack/gh-pages --progress --hide-modules",
     "deploy-gh": "sh ./tools/gh-pages-publish.sh",
-    "prepublish": "npm run build && npm run copy",
+    "prepare": "npm run build && npm run copy",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "copy": "cp README.md dist/lib",
@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "keywords": [
-    "arc", 
+    "arc",
     "text",
     "curve",
     "arc-type",
@@ -86,7 +86,7 @@
     "vue-loader": "^10.0.0",
     "vue-style-loader": "^1.0.0",
     "vue-template-compiler": "^2.1.0",
-    "webpack": "^2.1.0-beta.25",
+    "webpack": "^2.7.0",
     "webpack-dev-server": "^2.1.0-beta.9"
   }
 }
