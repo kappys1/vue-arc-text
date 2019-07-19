@@ -23,7 +23,7 @@ npm install --save vue-arc-text
 
 ```html
 <template>
-  <vue-arc-text ref="arctext" :text=text :arc=+arc :direction=direction :className="classFont"></vue-arc-text>
+  <vue-arc-text ref="arctext" :text=text :arc=+arc :direction=direction ></vue-arc-text>
 </template>
 ```
 
@@ -50,7 +50,6 @@ npm install --save vue-arc-text
 | text | string |  | Text you want to curve |
 | arc | number | 150 | Angle you want to curve |
 | direction | number | 1 | 1 is clockwise mode and -1 is counter-clockwise mode |
-| class | string |  | to add class into Component |
 
 ## Function
 You can access to update function to force the update of component.

@@ -7,7 +7,7 @@
 
     <section>
       <div :class="'show ' + classFont"> 
-        <vue-arc-text ref="arctext" :text=text :arc=+arc :direction=direction :className="classFont"></vue-arc-text>
+        <vue-arc-text ref="arctext" :text=text :arc=+arc :direction=direction ></vue-arc-text>
       </div>
 
       <div class="content">
