@@ -5,8 +5,8 @@
   "author": "alex marcos <alexsbd1@gmail.com>",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/demo --open --inline --hot",
-    "build": "webpack --config webpack/prod --progress --hide-modules",
-    "build-gh": "webpack --config webpack/gh-pages --progress --hide-modules",
+    "build": "webpack --config ./webpack/prod --progress --hide-modules",
+    "build-gh": "webpack --config ./webpack/gh-pages --progress --hide-modules",
     "deploy-gh": "sh ./tools/gh-pages-publish.sh",
     "prepublish": "npm run build && npm run copy",
     "commit": "git-cz",
